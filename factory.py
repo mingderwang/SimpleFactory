@@ -16,12 +16,8 @@ class AppleIPhone(Base):
         return self
 
 class Factory:
-    @classmethod
     def create_type(self, type):
-        if type == "iphone":
-            phone = AppleIPhone()
-        elif type == "samgsung":
-            phone = Samgsung()
-        else:
-           raise Exception(f"Not implemented {type}")
-        return phone.create()
+        return {
+          'iphone': AppleIPhone(),
+          'samgsung': Samgsung(),
+        }[type].create()
