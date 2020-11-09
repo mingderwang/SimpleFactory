@@ -1,14 +1,11 @@
-from factory import Factory
+from utils.simple_factory import PhoneFactory
 
 class App:
   def main():
-    工廠 = Factory()
-    iphone1 = 工廠.create_type('iphone')
-    iphone2 = 工廠.create_type('iphone')
-    if (iphone1 == iphone2):
-      print('same phone')
-    else:
-      print("different ones")
-
+    工廠 = PhoneFactory()
+    phone1 = 工廠.create_type('samsung')
+    phone2 = 工廠.create_type('iphone')
+    phone1.show()
+    phone2.show()
 
 App.main()
