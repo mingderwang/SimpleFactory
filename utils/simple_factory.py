@@ -1,6 +1,6 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABC, abstractmethod
 
-class Phone(metaclass=ABCMeta):
+class Phone(ABC):
     @abstractmethod
     def show(self):
         pass
